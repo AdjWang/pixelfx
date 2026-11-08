@@ -69,6 +69,7 @@ import * as lightning_storm_cloud from "./lightning/storm-cloud.js";
 import * as lightning_tesla_coil from "./lightning/tesla-coil.js";
 import * as lightning_thunderclap from "./lightning/thunderclap.js";
 import * as lightning_zap_hit from "./lightning/zap-hit.js";
+import * as scifi_door from "./scifi/door.js";
 import * as scifi_emp_blast from "./scifi/emp-blast.js";
 import * as scifi_energy_core from "./scifi/energy-core.js";
 import * as scifi_flash from "./scifi/flash.js";
@@ -216,6 +217,7 @@ import * as pickups_chest_open from "./pickups/chest-open.js";
 import * as pickups_coin_spin from "./pickups/coin-spin.js";
 import * as pickups_collect_burst from "./pickups/collect-burst.js";
 import * as pickups_crystal_shard from "./pickups/crystal-shard.js";
+import * as pickups_gear from "./pickups/gear.js";
 import * as pickups_gem_spin from "./pickups/gem-spin.js";
 import * as pickups_heart_pickup from "./pickups/heart-pickup.js";
 import * as pickups_key_glint from "./pickups/key-glint.js";
@@ -318,6 +320,7 @@ export const effects = {
   "lightning/tesla-coil": lightning_tesla_coil,
   "lightning/thunderclap": lightning_thunderclap,
   "lightning/zap-hit": lightning_zap_hit,
+  "scifi/door": scifi_door,
   "scifi/emp-blast": scifi_emp_blast,
   "scifi/energy-core": scifi_energy_core,
   "scifi/flash": scifi_flash,
@@ -465,6 +468,7 @@ export const effects = {
   "pickups/coin-spin": pickups_coin_spin,
   "pickups/collect-burst": pickups_collect_burst,
   "pickups/crystal-shard": pickups_crystal_shard,
+  "pickups/gear": pickups_gear,
   "pickups/gem-spin": pickups_gem_spin,
   "pickups/heart-pickup": pickups_heart_pickup,
   "pickups/key-glint": pickups_key_glint,

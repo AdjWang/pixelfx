@@ -1,6 +1,6 @@
 # Catalog
 
-245 effects in 21 categories. Every one is a file in
+247 effects in 21 categories. Every one is a file in
 `src/fx/<category>/<name>.js`; render any of them with `node tools/render.mjs <id> --gif`.
 
 ## moves
@@ -120,6 +120,7 @@ holograms, shields, scanners, warps.
 
 | effect | id | | size | what it does |
 |---|---|---|---|---|
+| Digital door | `scifi/door` | one-shot 1.2s | 320×48 | A compact vertical sci-fi lock scans, unlocks and retracts upward from a lit sill, leaving a clean empty frame. |
 | EMP blast | `scifi/emp-blast` | one-shot 3.2s | 152×116 | A disc charge ticks, pops white, and a bubble of rolling scanlines swells out with arcs crawling its skin; it strobes, tears and shorts out into falling dead pixels. |
 | Energy core | `scifi/energy-core` | loop 2.4s | 112×100 | A plasma core beating in a steel cage: it swells and throws a shock ring on each beat, two tilted rings orbit it, and arcs jump to the bars and spark. |
 | Electric flash | `scifi/flash` | one-shot 0.78s | 64×64 | A sci-fi burst built from expanding energy rings, clear white-cored electric lines and drifting point particles that ease out to nothing. |
@@ -351,6 +352,7 @@ coins, gems, chests, potions.
 | Coin spin | `pickups/coin-spin` | loop 1.6s | 56×56 | A thick gold coin turning on its edge: an embossed star face, a reeded rim showing as it goes edge-on, a flash sweeping the face, bobbing over its shadow. |
 | Collect burst | `pickups/collect-burst` | one-shot 1.35s | 112×108 | The moment of pickup: a white flash and a cross of light, a thin ring snapping out ahead of a softer one, twinkles thrown wide on curving paths that brake, hang and wink out. |
 | Crystal shard | `pickups/crystal-shard` | loop 3.2s | 64×76 | A broken amber shard hovers and sways: chipped uneven faces, its top sheared off, light pulsing up through glowing cracks and flaring out of the break; splinters orbit it. |
+| Gear pickup | `pickups/gear` | loop 2.4s | 64×64 | A machined gear hovers over its pickup shadow while a cool ring, rotating rays and orbiting sparks build its energy. |
 | Gem spin | `pickups/gem-spin` | loop 2.4s | 64×64 | A brilliant-cut ruby turning on its axis: real facets catch the light in turn, flashes roll over the crown, refracted light slides across the floor, sparkles wink round it. |
 | Heart pickup | `pickups/heart-pickup` | loop 1.2s | 56×60 | A plump glossy heart hovering over its shadow beats lub-dub: a big squash and stretch, a smaller echo, light and a thin ring pulsing out, tiny hearts drifting off. |
 | Key glint | `pickups/key-glint` | loop 2s | 72×60 | An ornate silver key hovering and rocking; a glint runs from its bow down the shaft to the teeth and bursts off the tip as falling sparks. |
