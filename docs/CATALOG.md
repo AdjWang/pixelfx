@@ -1,6 +1,6 @@
 # Catalog
 
-247 effects in 21 categories. Every one is a file in
+248 effects in 21 categories. Every one is a file in
 `src/fx/<category>/<name>.js`; render any of them with `node tools/render.mjs <id> --gif`.
 
 ## moves
@@ -127,6 +127,7 @@ holograms, shields, scanners, warps.
 | Force field | `scifi/force-field` | loop 2.4s | 184×104 | A glassy dome of hex plates over the hero: plates glint, tracers from the right slam into it, a ripple and cracks of light race across, sparks glance off. |
 | Glitch | `scifi/glitch` | loop 2.4s | 88×64 | The hero's signal breaks up in bursts: an RGB split, slices torn sideways, rows smeared out, junk blocks and dead pixels, then snaps back clean. |
 | Hologram | `scifi/hologram` | loop 4s | 112×104 | A floor projector throws a cone of light holding a turning wireframe model: scanlines roll through it, a data ring circles it, and it flickers, tears and jitters. |
+| Hologram effect | `scifi/hologram-effect` | loop 4s | 32×32 | A floor projector throws a cone of light with scanlines, data rings, glitches and rising signal fragments; no model or board remains. |
 | Jetpack | `scifi/jetpack` | loop 2s | 96×116 | Twin thrusters fire straight down: white-hot cores with shock diamonds inside ragged flames, puffs that cool into smoke billowing below, lit by the fire. |
 | Laser grid | `scifi/laser-grid` | loop 3s | 128×84 | Security lasers between two steel posts: red beams slide and scissor across, dust and haze light up only where they cut through, and the floor sweepers scorch and spark. |
 | Scanner | `scifi/scanner` | loop 3.2s | 112×78 | Brackets snap onto the hero, a scan line sweeps head to toe leaving a cooling outline, and a readout counts up to OK before it all lets go. |

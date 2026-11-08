@@ -76,6 +76,7 @@ import * as scifi_flash from "./scifi/flash.js";
 import * as scifi_force_field from "./scifi/force-field.js";
 import * as scifi_glitch from "./scifi/glitch.js";
 import * as scifi_hologram from "./scifi/hologram.js";
+import * as scifi_hologram_effect from "./scifi/hologram-effect.js";
 import * as scifi_jetpack from "./scifi/jetpack.js";
 import * as scifi_laser_grid from "./scifi/laser-grid.js";
 import * as scifi_scanner from "./scifi/scanner.js";
@@ -327,6 +328,7 @@ export const effects = {
   "scifi/force-field": scifi_force_field,
   "scifi/glitch": scifi_glitch,
   "scifi/hologram": scifi_hologram,
+  "scifi/hologram-effect": scifi_hologram_effect,
   "scifi/jetpack": scifi_jetpack,
   "scifi/laser-grid": scifi_laser_grid,
   "scifi/scanner": scifi_scanner,
