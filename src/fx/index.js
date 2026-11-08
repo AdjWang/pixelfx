@@ -72,10 +72,9 @@ import * as lightning_zap_hit from "./lightning/zap-hit.js";
 import * as scifi_door from "./scifi/door.js";
 import * as scifi_emp_blast from "./scifi/emp-blast.js";
 import * as scifi_energy_core from "./scifi/energy-core.js";
-import * as scifi_energy_core_empty from "./scifi/energy-core-empty.js";
-import * as scifi_energy_core2 from "./scifi/energy-core2.js";
 import * as scifi_flash from "./scifi/flash.js";
 import * as scifi_force_field from "./scifi/force-field.js";
+import * as scifi_gear from "./scifi/gear.js";
 import * as scifi_glitch from "./scifi/glitch.js";
 import * as scifi_hologram from "./scifi/hologram.js";
 import * as scifi_hologram_effect from "./scifi/hologram-effect.js";
@@ -326,10 +325,9 @@ export const effects = {
   "scifi/door": scifi_door,
   "scifi/emp-blast": scifi_emp_blast,
   "scifi/energy-core": scifi_energy_core,
-  "scifi/energy-core-empty": scifi_energy_core_empty,
-  "scifi/energy-core2": scifi_energy_core2,
   "scifi/flash": scifi_flash,
   "scifi/force-field": scifi_force_field,
+  "scifi/gear": scifi_gear,
   "scifi/glitch": scifi_glitch,
   "scifi/hologram": scifi_hologram,
   "scifi/hologram-effect": scifi_hologram_effect,

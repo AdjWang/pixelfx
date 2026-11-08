@@ -1,6 +1,6 @@
 # Catalog
 
-250 effects in 21 categories. Every one is a file in
+249 effects in 21 categories. Every one is a file in
 `src/fx/<category>/<name>.js`; render any of them with `node tools/render.mjs <id> --gif`.
 
 ## moves
@@ -123,10 +123,9 @@ holograms, shields, scanners, warps.
 | Digital door | `scifi/door` | one-shot 1.2s | 320×48 | A compact vertical sci-fi lock scans, unlocks and retracts upward from a lit sill, leaving a clean empty frame. |
 | EMP blast | `scifi/emp-blast` | one-shot 3.2s | 152×116 | A disc charge ticks, pops white, and a bubble of rolling scanlines swells out with arcs crawling its skin; it strobes, tears and shorts out into falling dead pixels. |
 | Energy core | `scifi/energy-core` | loop 2.4s | 112×100 | A plasma core beating in a steel cage: it swells and throws a shock ring on each beat, two tilted rings orbit it, and arcs jump to the bars and spark. |
-| Empty energy container | `scifi/energy-core-empty` | loop 2.4s | 32×64 | An empty compact reactor container with translucent glass, a steel base and cap, and a quiet internal light. |
-| Energy core gear | `scifi/energy-core2` | loop 2.4s | 32×64 | A narrow steel cage holds a rotating gear with a white rim; orbit rings, arcs, motes, status lights and the cap remain active without the expanding shock ring. |
 | Electric flash | `scifi/flash` | one-shot 0.78s | 64×64 | A sci-fi burst built from expanding energy rings, clear white-cored electric lines and drifting point particles that ease out to nothing. |
 | Force field | `scifi/force-field` | loop 2.4s | 184×104 | A glassy dome of hex plates over the hero: plates glint, tracers from the right slam into it, a ripple and cracks of light race across, sparks glance off. |
+| Gear | `scifi/gear` | loop 2.4s | 32×64 | A rotating gear with a white rim floats inside orbit rings while electric arcs, sparks, motes and pulsing light flare around it. |
 | Glitch | `scifi/glitch` | loop 2.4s | 88×64 | The hero's signal breaks up in bursts: an RGB split, slices torn sideways, rows smeared out, junk blocks and dead pixels, then snaps back clean. |
 | Hologram | `scifi/hologram` | loop 4s | 112×104 | A floor projector throws a cone of light holding a turning wireframe model: scanlines roll through it, a data ring circles it, and it flickers, tears and jitters. |
 | Hologram effect | `scifi/hologram-effect` | loop 4s | 32×32 | A floor projector throws a cone of light with scanlines, data rings, glitches and rising signal fragments; no model or board remains. |
