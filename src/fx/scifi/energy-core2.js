@@ -13,6 +13,8 @@ export const meta = {
 };
 
 const D = meta.duration, CY = -22, R0 = 6.4, RC = 10, TOPY = -39, BOTY = -6, SLOT = 0.1, NS = Math.round(D / SLOT);
+// Adjust from 0 (invisible) to 1 (current glass strength).
+const GLASS_ALPHA = 5;
 const BEATS = [[0.05, 1, true], [0.25, 0.5, false], [1.25, 1, true], [1.45, 0.5, false]];
 const env = (a) => (a < 0.03 ? a / 0.03 : Math.exp(-(a - 0.03) / 0.12));
 const pulseAt = (t) => BEATS.reduce((m, [b, k]) => Math.max(m, k * env(since(t, b, D))), 0);
@@ -78,9 +80,9 @@ export function drawBack(p, t, o) {
   for (let y = Math.ceil(TOPY + 1); y <= Math.floor(BOTY - 1); y++) for (let x = -11; x <= 11; x++) {
     const q = (x / 11) ** 2 + ((y - gy) / gh) ** 2;
     if (q >= 1) continue;
-    const rim = Math.pow(q, 3), a = 0.08 + 0.14 * rim + 0.04 * pulse;
+    const rim = Math.pow(q, 3), a = GLASS_ALPHA * (0.08 + 0.14 * rim + 0.04 * pulse);
     p.blend(x + 0.5, y + 0.5, q > 0.72 ? C[3] : C[2], a);
-    if (Math.abs(x) < 2 && (y & 2) === 0) p.blend(x + 0.5, y + 0.5, C[5], 0.08 + 0.04 * pulse);
+    if (Math.abs(x) < 2 && (y & 2) === 0) p.blend(x + 0.5, y + 0.5, C[5], GLASS_ALPHA * (0.08 + 0.04 * pulse));
   }
   p.glow(0, gy, 13, C[3], 0.16 + 0.08 * pulse);
   hoop(p, BOTY, RC, H, C, false, pulse); hoop(p, TOPY, RC, H, C, false, pulse); for (const rg of RINGS) ring(p, t, rg, C, false, pulse);
