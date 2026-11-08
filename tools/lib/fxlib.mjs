@@ -218,14 +218,25 @@ export function contactSheet(fx, r, { max = 16, width = 1600, title, zoom } = {}
 }
 
 /** A sprite sheet (transparent frames in a grid) plus Aseprite-style JSON that most engines import. */
-export function spriteSheet(fx, r, name) {
+function layerRgba(packed, light = false) {
+  const out = new Uint8ClampedArray(packed.length * 4);
+  for (let i = 0; i < packed.length; i++) {
+    const c = packed[i], j = i * 4, r = c & 255, g = (c >>> 8) & 255, b = (c >>> 16) & 255;
+    out[j] = r; out[j + 1] = g; out[j + 2] = b;
+    out[j + 3] = light ? Math.max(r, g, b) : c >>> 24;
+  }
+  return out;
+}
+
+export function spriteSheet(fx, r, name, layer = "clear") {
   const { w, h, frames, fps } = r, n = frames.length;
   const cols = Math.min(n, Math.max(1, Math.ceil(Math.sqrt((n * h) / w)))), rows = Math.ceil(n / cols);
   const img = canvas(cols * w, rows * h, [0, 0, 0, 0]);
   const json = { frames: [], meta: {} };
   frames.forEach((f, i) => {
     const x = (i % cols) * w, y = Math.floor(i / cols) * h;
-    img.paste(f.clear, w, h, x, y);
+    const rgba = layer === "color" ? layerRgba(f.raw) : layer === "light" ? layerRgba(f.light, true) : f.clear;
+    img.paste(rgba, w, h, x, y);
     json.frames.push({
       filename: `${name} ${i}`, frame: { x, y, w, h }, rotated: false, trimmed: false,
       spriteSourceSize: { x: 0, y: 0, w, h }, sourceSize: { w, h }, duration: Math.round(1000 / fps),

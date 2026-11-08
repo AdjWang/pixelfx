@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>pixelfx test</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #080a12; }
+    canvas { width: min(960px, 92vw); height: auto; image-rendering: pixelated; image-rendering: crisp-edges; background: #10131f; }
+  </style>
+  <script type="importmap">
+    {
+      "imports": {
+        "pixelfx": "../src/core/index.js",
+        "pixelfx/": "../src/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="canvas" width="320" height="180" aria-label="Animated candle effect"></canvas>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
