@@ -70,6 +70,7 @@ import * as lightning_tesla_coil from "./lightning/tesla-coil.js";
 import * as lightning_thunderclap from "./lightning/thunderclap.js";
 import * as lightning_zap_hit from "./lightning/zap-hit.js";
 import * as scifi_door from "./scifi/door.js";
+import * as scifi_door_16 from "./scifi/door-16.js";
 import * as scifi_emp_blast from "./scifi/emp-blast.js";
 import * as scifi_energy_core from "./scifi/energy-core.js";
 import * as scifi_flash from "./scifi/flash.js";
@@ -237,6 +238,7 @@ import * as transitions_pixel_dissolve from "./transitions/pixel-dissolve.js";
 import * as transitions_shatter_wipe from "./transitions/shatter-wipe.js";
 import * as transitions_slash_wipe from "./transitions/slash-wipe.js";
 import * as transitions_star_iris from "./transitions/star-iris.js";
+import * as tileset_scifi_steel from "./tileset/scifi-steel.js";
 import * as critters_bat from "./critters/bat.js";
 import * as critters_bird from "./critters/bird.js";
 import * as critters_butterfly from "./critters/butterfly.js";
@@ -323,6 +325,7 @@ export const effects = {
   "lightning/thunderclap": lightning_thunderclap,
   "lightning/zap-hit": lightning_zap_hit,
   "scifi/door": scifi_door,
+  "scifi/door-16": scifi_door_16,
   "scifi/emp-blast": scifi_emp_blast,
   "scifi/energy-core": scifi_energy_core,
   "scifi/flash": scifi_flash,
@@ -490,6 +493,7 @@ export const effects = {
   "transitions/shatter-wipe": transitions_shatter_wipe,
   "transitions/slash-wipe": transitions_slash_wipe,
   "transitions/star-iris": transitions_star_iris,
+  "tileset/scifi-steel": tileset_scifi_steel,
   "critters/bat": critters_bat,
   "critters/bird": critters_bird,
   "critters/butterfly": critters_butterfly,

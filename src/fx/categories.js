@@ -21,5 +21,6 @@ export const categories = [
   { id: "ui", name: "ui", blurb: "level ups, numbers, toasts, countdowns" },
   { id: "pickups", name: "pickups", blurb: "coins, gems, chests, potions" },
   { id: "transitions", name: "transitions", blurb: "wipes, irises, dissolves" },
+  { id: "tileset", name: "tilesets", blurb: "autotile-ready sci-fi terrain pieces" },
   { id: "critters", name: "critters", blurb: "slimes, bats, ghosts, frogs" },
 ];

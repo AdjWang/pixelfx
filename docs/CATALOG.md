@@ -1,6 +1,6 @@
 # Catalog
 
-249 effects in 21 categories. Every one is a file in
+251 effects in 22 categories. Every one is a file in
 `src/fx/<category>/<name>.js`; render any of them with `node tools/render.mjs <id> --gif`.
 
 ## moves
@@ -120,7 +120,8 @@ holograms, shields, scanners, warps.
 
 | effect | id | | size | what it does |
 |---|---|---|---|---|
-| Digital door | `scifi/door` | one-shot 1.2s | 320×48 | A compact vertical sci-fi lock scans, unlocks and retracts upward from a lit sill, leaving a clean empty frame. |
+| Digital door | `scifi/door` | one-shot 1.8s | 64×96 | A solid steel sci-fi door is written by one sweeping scan, then fades cleanly into a few falling signal fragments. |
+| Digital door 16 | `scifi/door-16` | one-shot 1.8s | 32×48 | A compact solid steel sci-fi door scans in place, then fades cleanly into a few falling signal fragments. |
 | EMP blast | `scifi/emp-blast` | one-shot 3.2s | 152×116 | A disc charge ticks, pops white, and a bubble of rolling scanlines swells out with arcs crawling its skin; it strobes, tears and shorts out into falling dead pixels. |
 | Energy core | `scifi/energy-core` | loop 2.4s | 112×100 | A plasma core beating in a steel cage: it swells and throws a shock ring on each beat, two tilted rings orbit it, and arcs jump to the bars and spark. |
 | Electric flash | `scifi/flash` | one-shot 0.78s | 64×64 | A sci-fi burst built from expanding energy rings, clear white-cored electric lines and drifting point particles that ease out to nothing. |
@@ -379,6 +380,14 @@ wipes, irises, dissolves.
 | Shatter wipe | `transitions/shatter-wipe` | one-shot 2.8s | 320×180 | A dark glass pane drops over the screen and bounces; cracks race out from an impact with a flash, then it bursts into tumbling glass shards with lit edges that fall away. |
 | Slash wipe | `transitions/slash-wipe` | one-shot 1.7s | 320×180 | A white-hot blade edge slices across the screen, light ahead of it and sparks spraying back over the cover; a second cut flashes through and the cover splits apart. |
 | Star iris | `transitions/star-iris` | one-shot 2.2s | 320×180 | A five-point star iris spins shut on the middle of the screen, its gold rim lit and its tips twinkling and shedding motes; it closes on a glint and spins open again from a flash. |
+
+## tilesets
+
+autotile-ready sci-fi terrain pieces.
+
+| effect | id | | size | what it does |
+|---|---|---|---|---|
+| Sci-fi steel autotile | `tileset/scifi-steel` | loop 2.4s | 80×16 | A five-piece sci-fi platform tileset with shared bevels, segmented circuitry and a moving energy scan. |
 
 ## critters
 

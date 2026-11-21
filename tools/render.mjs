@@ -6,8 +6,9 @@
 //   node tools/render.mjs "magic/portal*" --mp4 --scale 6
 //   node tools/render.mjs ui/level-up --all     every frame in the contact sheet
 //   node tools/render.mjs fire/torch --opts '{"palette":["#102","#215","#43a","#8cf","#fff"]}'
+//   node tools/render.mjs scifi/gear --sheet --layer both
 //
-// Options: --gif --mp4 --sheet (transparent PNG + JSON) --all --max N (frames in the contact sheet)
+// Options: --gif --mp4 --sheet (transparent PNG + JSON) --aseprite (native .aseprite) --all --max N (frames in the contact sheet)
 // --zoom N (contact sheet scale) --scale N (GIF/MP4) --bg dark|ground|sky|light|black|none --seed N --fps N --opts JSON --out DIR
 // --no-actor --loops N (repeat a loop in the GIF/MP4)
 //
@@ -15,16 +16,17 @@
 
 import { join } from "node:path";
 import { ROOT, resolveIds, loadEffect, renderFrames, contactSheet, spriteSheet, writeVideo, save } from "./lib/fxlib.mjs";
+import { writeAseprite } from "./lib/aseprite.mjs";
 
 const args = process.argv.slice(2), flags = {}, ids = [];
 for (let i = 0; i < args.length; i++) {
   const a = args[i];
   if (!a.startsWith("--")) ids.push(a);
-  else if (["gif", "mp4", "sheet", "all", "no-actor"].includes(a.slice(2))) flags[a.slice(2)] = true;
+  else if (["gif", "mp4", "sheet", "aseprite", "all", "no-actor"].includes(a.slice(2))) flags[a.slice(2)] = true;
   else flags[a.slice(2)] = args[++i];
 }
 if (!ids.length) {
-  console.error("usage: node tools/render.mjs <id|category|pattern>... [--gif] [--mp4] [--sheet] [--all]");
+  console.error("usage: node tools/render.mjs <id|category|pattern>... [--gif] [--mp4] [--sheet] [--aseprite] [--all]");
   process.exit(1);
 }
 
@@ -36,7 +38,7 @@ for (const id of resolveIds(ids)) {
     const r = renderFrames(fx, {
       fps: flags.fps ? +flags.fps : undefined,
       seed: flags.seed ? +flags.seed : undefined,
-      bg: flags.bg,
+      bg: flags.bg ?? (flags.aseprite ? "none" : undefined),
       actor: flags["no-actor"] ? false : undefined,
       options: flags.opts ? JSON.parse(flags.opts) : undefined,
     });
@@ -46,6 +48,10 @@ for (const id of resolveIds(ids)) {
     const loops = +(flags.loops ?? (fx.meta.loop ? 2 : 1));
     if (flags.gif && writeVideo(join(dir, "anim.gif"), r, k, { loops })) made.push(join(dir, "anim.gif"));
     if (flags.mp4 && writeVideo(join(dir, "anim.mp4"), r, k, { loops: Math.max(loops, fx.meta.loop ? 3 : 1) })) made.push(join(dir, "anim.mp4"));
+    if (flags.aseprite) {
+      const name = id.split("/")[1];
+      made.push(writeAseprite(join(dir, `${name}.aseprite`), r));
+    }
     if (flags.sheet) {
       const name = id.split("/")[1], requested = flags.layer ? String(flags.layer).toLowerCase() : "clear";
       const layers = requested === "both" ? ["color", "light"] : [requested];
